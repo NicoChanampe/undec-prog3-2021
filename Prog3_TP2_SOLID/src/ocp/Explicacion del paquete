@@ -1,3 +1,0 @@
-En el paquete se aprecia el programado respetando los principios OCP y SRP.
-En este caso el problema era representar  la llegada de autos a la estacion
-y que estos carguen nafta o diesel ademas de poder calibrar las ruedas.
