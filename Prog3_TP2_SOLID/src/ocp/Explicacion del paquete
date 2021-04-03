@@ -1,0 +1,4 @@
+En el paquete se aprecia un ejemplo en donde se programa implementando principios OCP y SRP.
+se busca representar el problema de la llegada de autos a la estacion de servicio y
+que estos carguen nafta o diesel (acorde al tipo de auto que llegue) ademas de poder calibrar
+las ruedas (se considera que llegan autos nomas).

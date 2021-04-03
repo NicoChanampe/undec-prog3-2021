@@ -2,6 +2,9 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import ocp.AutoGasolero;
+import ocp.AutoNaftero;
+import ocp.Automovil;
 import org.junit.jupiter.api.Test;
 
 public class TestGasolinera {
