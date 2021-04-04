@@ -1,13 +1,16 @@
 package test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import isp.Leon;
+import isp.Mono;
+import isp.Tortuga;
 import org.junit.jupiter.api.Test;
 
 public class TestAnimal {
     @Test
     void test01_generarLeonYHacerloHacerCosas() {
 
-        Leon simba = new Leon ("leon");
+        Leon simba = new Leon("leon");
 
         assertEquals("leon",simba.getNombre());
         assertEquals("inhala-exhala",simba.respirar());
@@ -30,11 +33,11 @@ public class TestAnimal {
     @Test
     void test03_generarTortugaYHacerloHacerCosas() {
 
-        Tortuga simba = new Tortuga ("tortuga");
+        Tortuga manuelita = new Tortuga ("tortuga");
 
-        assertEquals("tortuga",simba.getNombre());
-        assertEquals("respirando",simba.respirar());
-        assertEquals("comiendo hierbas",simba.comer());
+        assertEquals("tortuga",manuelita.getNombre());
+        assertEquals("respirando",manuelita.respirar());
+        assertEquals("comiendo hierbas",manuelita.comer());
     }
 
 }
