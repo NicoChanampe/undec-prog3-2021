@@ -1,0 +1,6 @@
+Ejemplo en donde se muestra un codigo que cumple con el principio ISP.
+
+"Ningún cliente debe ser obligado a depender de métodos que no utiliza".
+
+CONTEXTO:
+        Acorde al animal generar las distintas actividades que este tiene.

@@ -1,0 +1,8 @@
+En el paquete se aprecia un ejemplo en donde se programa implementando principios OCP y SRP.
+
+"Un artefacto de software debe estar abierto a la ampliación pero cerrado a la modificación".
+
+CONTEXTO:
+        Se busca representar el problema de la llegada de autos a la estación de servicio y
+        que estos carguen nafta o diesel (acorde al tipo de auto que llegue) además de poder calibrar
+        las ruedas (se considera que llegan autos nomás).
