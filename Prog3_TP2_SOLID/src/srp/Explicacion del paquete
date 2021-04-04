@@ -1,2 +1,6 @@
-En el paquete se ven la aplicación del principio srp.
-Se trata en recibir los lados de un triangulo izocel y calcular el area y perimetro de este.
+En el paquete se ven la aplicación del principio SRP.
+
+“Una clase o módulo debe tener una y solo una razón para cambiar”.
+
+CONTEXTO:
+        Se trata en recibir los lados de un triangulo izocel y calcular el area y perimetro de este.

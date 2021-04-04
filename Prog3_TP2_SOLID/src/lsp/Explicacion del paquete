@@ -1,0 +1,6 @@
+Ejemplo en donde se busca mostrar un caso en el que se cumpla el principio LSP.
+
+"Las funciones que utilizan punteros a clases base deben poder utilizar objetos de clases derivadas sin saberlo"
+
+CONTEXTO:
+Se busca arrancar una moto independientemente del tipo de motor que esta posea.
