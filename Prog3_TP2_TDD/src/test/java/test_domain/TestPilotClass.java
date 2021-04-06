@@ -1,5 +1,7 @@
 package test_domain;
 
+import com.domain.Pilot;
+import com.exception.exceptionsPilot.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -8,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestPilotClass {
     @Test
-    public void test01_GenerateObjectPilotCorrectly() throws ExceptionPilot{
+    public void test01_GenerateObjectPilotCorrectly() throws ExceptionPilot {
         LocalDate dateBorn = LocalDate.parse("1994-01-20");
         Pilot pilot = Pilot.factoryPilot("30-64140555-4",120,"Cardozo","Franco David",dateBorn);
         assertNotNull(pilot);
