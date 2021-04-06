@@ -15,34 +15,7 @@ public class TestAirlineClass {
     }
 
     @Test
-    public void test02_AirlineAllGettersFunctionCorrectly() throws ExceptionAirline{
-        LocalDate data = LocalDate.parse("2015-04-02");
-        Airline airline = Airline.factoryAirline("30-64140555-4","AR","Aerolineas Argentinas",data);
-
-        assertEquals("30-64140555-4",airline.getCuit());
-        assertEquals("AR",airline.getCodeIATA());
-        assertEquals("Aerolineas Argentinas",airline.getName());
-        assertTrue(data.equals(airline.getDateStartActivities()));
-    }
-
-    @Test
-    public void test03_AirlineAllSettersFunctionCorrectly() throws ExceptionAirline{
-        LocalDate data = LocalDate.parse("2015-04-02");
-        LocalDate newDate = LocalDate.parse("2017-01-14");
-        Airline airline = Airline.factoryAirline("37-98140555-5","AL","Aerolineas Argelinas",data);
-
-        airline.setCuit("30-64140555-4");
-        airline.setCodeIATA("AR");
-        airline.setName("Aerolineas Argentinas");
-        airline.setDateStartActivities(newDate);
-        assertEquals("30-64140555-4",airline.getCuit());
-        assertEquals("AR",airline.getCodeIATA());
-        assertEquals("Aerolineas Argentinas",airline.getName());
-        assertTrue(newDate.equals(airline.getDateStartActivities()));
-    }
-
-    @Test
-    public void test04_AirlineCreate_someAtributeNull(){
+    public void test02_AirlineCreate_someAtributeNull(){
         LocalDate data = LocalDate.parse("2015-04-02");
 
         assertThrows(ExceptionAirlineCuitNull.class, () -> {
@@ -59,7 +32,7 @@ public class TestAirlineClass {
     }
 
     @Test
-    public void test05_AirlineCreate_someAtributeEmpty(){
+    public void test03_AirlineCreate_someAtributeEmpty(){
         LocalDate data = LocalDate.parse("2015-04-02");
 
         assertThrows(ExceptionAirlineCuitEmpty.class, () -> {
@@ -76,7 +49,7 @@ public class TestAirlineClass {
     }
 
     @Test
-    public void test06_AirlineCreation_CuitWrong() {
+    public void test04_AirlineCreation_CuitWrong() {
         LocalDate data;
         data = LocalDate.parse("2018-01-20");
 
@@ -110,7 +83,7 @@ public class TestAirlineClass {
     }
 
     @Test
-    public void test07_CreationAirline_CodeIATAlWrong(){
+    public void test05_CreationAirline_CodeIATAlWrong(){
         LocalDate data = LocalDate.parse("2015-04-02");
 
         assertThrows(ExceptionAirlineCodeIATAWrong.class, () ->{

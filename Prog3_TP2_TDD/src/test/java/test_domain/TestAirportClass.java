@@ -12,18 +12,9 @@ public class TestAirportClass {
         assertNotNull(airport);
     }
 
-    @Test
-    public void test02_AirportGettersFunctionCorrectly() throws ExceptionAirport{
-        Airport airport = Airport.factoryAirport("EZE","Aeroparque Jorge Newberry","CABA",1802);
-
-        assertEquals("EZE",airport.getCodeIATA());
-        assertEquals("Jorge Newberry",airport.getName());
-        assertEquals("CABA",airport.getCity());
-        assertEquals(1802,airport.getCodePostal());
-    }
 
     @Test
-    public void test03_CreationAirportCorrectly() throws ExceptionAirport{
+    public void test02_CreationAirportCorrectly() throws ExceptionAirport{
         Airport airport = Airport.factoryAirport("MDP","Aeropuerto Internacional Astor Piazolla","Mar del Plata",7600);
 
         airport.setCodeIATA("EZE");
@@ -38,7 +29,7 @@ public class TestAirportClass {
     }
 
     @Test
-    public void test04_CreationAirport_AtributesNull(){
+    public void test03_CreationAirport_AtributesNull(){
         assertThrows(ExceptionAirportCodeIATANull.class, () ->{
             Airport airport = Airport.factoryAirport(null,"Aeroparque Jorge Newberry","CABA",1802);
         });
@@ -57,7 +48,7 @@ public class TestAirportClass {
     }
 
     @Test
-    public void test05_CreationAirport_AtributesEmpty(){
+    public void test04_CreationAirport_AtributesEmpty(){
         assertThrows(ExceptionAirportCodeIATAEmpty.class, () ->{
             Airport airport = Airport.factoryAirport("","Aeroparque Jorge Newberry","CABA",1802);
         });
@@ -72,7 +63,7 @@ public class TestAirportClass {
     }
 
     @Test
-    public void test06_CreationAirport_CodePostalWrong(){
+    public void test05_CreationAirport_CodePostalWrong(){
         assertThrows(ExceptionAirportCodePostalWrong.class, () ->{
             Airport airport = Airport.factoryAirport("EZE","Aeroparque Jorge Newberry","CABA",0);
         });
@@ -83,7 +74,7 @@ public class TestAirportClass {
     }
 
     @Test
-    public void test07_CreationAirport_CodeIATAlWrong(){
+    public void test06_CreationAirport_CodeIATAlWrong(){
         assertThrows(ExceptionAirportCodeIATAWrong.class, () ->{
             Airport airport = Airport.factoryAirport("eze","Aeroparque Jorge Newberry","CABA",1802);
         });

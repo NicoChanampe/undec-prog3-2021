@@ -17,38 +17,7 @@ public class TestPilotClass {
     }
 
     @Test
-    public void test02_PilotAllGettersFunctionCorrectly() throws ExceptionPilot{
-        LocalDate dateBorn = LocalDate.parse("1994-01-20");
-        Pilot pilot = Pilot.factoryPilot("30-64140555-4",120,"Cardozo","Franco David",dateBorn);
-
-        assertEquals("30-64140555-4",pilot.getCuil());
-        assertEquals(120,pilot.getBundle());
-        assertEquals("Cardozo",pilot.getLastName());
-        assertEquals("Franco David",pilot.getName());
-        assertTrue(dateBorn.equals(pilot.getDateBorn()));
-    }
-
-    @Test
-    public void test03_PilotAllSettersFunctionCorrectly() throws ExceptionPilot{
-        LocalDate newDateBorn = LocalDate.parse("1994-01-20");
-        LocalDate dateBorn = LocalDate.parse("1994-01-23");
-        Pilot pilot = Pilot.factoryPilot("30-22140555-3",350,"Carozo","Fransisco David",dateBorn);
-
-        pilot.setCuil("30-64140555-4");
-        pilot.setBundle(120);
-        pilot.setLastName("Cardozo");
-        pilot.setName("Franco David");
-        pilot.setDateBorn(newDateBorn);
-
-        assertEquals("30-64140555-4",pilot.getCuil());
-        assertEquals(120,pilot.getBundle());
-        assertEquals("Cardozo",pilot.getLastName());
-        assertEquals("Franco David",pilot.getName());
-        assertTrue(newDateBorn.equals(pilot.getDateBorn()));
-    }
-
-    @Test
-    public void test04_PilotCreation_SomeAtributeNull(){
+    public void test02_PilotCreation_SomeAtributeNull(){
         LocalDate dateBorn;
         dateBorn = LocalDate.parse("1994-01-20");
 
@@ -70,7 +39,7 @@ public class TestPilotClass {
     }
 
     @Test
-    public void test05_PilotCreation_SomeStringAtributeEmpty(){
+    public void test03_PilotCreation_SomeStringAtributeEmpty(){
         LocalDate dateBorn;
         dateBorn = LocalDate.parse("1994-01-20");
 
@@ -88,7 +57,7 @@ public class TestPilotClass {
     }
 
     @Test
-    public void test06_PilotCreation_BundleWrong(){
+    public void test04_PilotCreation_BundleWrong(){
         LocalDate dateBorn;
         dateBorn = LocalDate.parse("1994-01-20");
 
@@ -103,7 +72,7 @@ public class TestPilotClass {
     }
 
     @Test
-    public void test07_PilotCreation_CuilWrong() {
+    public void test05_PilotCreation_CuilWrong() {
         LocalDate dateBorn;
         dateBorn = LocalDate.parse("1994-01-20");
 
