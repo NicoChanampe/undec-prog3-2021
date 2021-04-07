@@ -1,5 +1,7 @@
 package test_domain;
 
+import com.domain.Airport;
+import com.exception.exceptionsAirport.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestAirportClass {
 
     @Test
-    public void test01_CreationAirportCorrectly() throws ExceptionAirport{
+    public void test01_CreationAirportCorrectly() throws ExceptionAirport {
         Airport airport = Airport.factoryAirport("EZE","Aeroparque Jorge Newberry","CABA",1802);
         assertNotNull(airport);
     }

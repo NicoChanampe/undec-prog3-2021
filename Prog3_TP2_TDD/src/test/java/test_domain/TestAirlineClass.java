@@ -1,5 +1,7 @@
 package test_domain;
 
+import com.domain.Airline;
+import com.exception.exceptionsAirline.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -8,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAirlineClass {
     @Test
-    public void test01_GenerateAirlineObjectCorrectly() throws ExceptionAirline{
+    public void test01_GenerateAirlineObjectCorrectly() throws ExceptionAirline {
         LocalDate data = LocalDate.parse("2015-04-02");
         Airline airline = Airline.factoryAirline("30-64140555-4","AR","Aerolineas Argentinas",data);
         assertNotNull(airline);
