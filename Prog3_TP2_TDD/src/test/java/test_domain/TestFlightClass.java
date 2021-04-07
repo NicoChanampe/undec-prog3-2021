@@ -1,17 +1,25 @@
 package test_domain;
 
+import com.domain.*;
+import com.exception.exceptionsAirline.ExceptionAirline;
+import com.exception.exceptionsAirport.ExceptionAirport;
+import com.exception.exceptionsFlight.*;
+import com.exception.exceptionsPilot.ExceptionPilot;
+import com.exception.exceptionsPlane.ExceptionPlane;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestFlightClass {
     @Test
-    public void test01_GenerateFlightObjectCorrectly() throws ExceptionAirport, ExceptionAirline, ExceptionPlane, ExceptionPilot,ExceptionFlight{
+    public void test01_GenerateFlightObjectCorrectly() throws ExceptionAirport, ExceptionAirline, ExceptionPlane, ExceptionPilot, ExceptionFlight {
         LocalDate dateCommandant = LocalDate.parse("1990-11-07");
         LocalDate dateCopilot = LocalDate.parse("1997-08-21");
         LocalDate data = LocalDate.parse("2015-04-02");
