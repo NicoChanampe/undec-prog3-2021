@@ -25,7 +25,7 @@ public class TestAirportClass {
         airport.setCodePostal(1802);
 
         assertEquals("EZE",airport.getCodeIATA());
-        assertEquals("Jorge Newberry",airport.getName());
+        assertEquals("Aeroparque Jorge Newberry",airport.getName());
         assertEquals("CABA",airport.getCity());
         assertEquals(1802,airport.getCodePostal());
     }
