@@ -21,7 +21,7 @@ public class TestCreateNewPilot {
     ICreateRepoPilot iCreateRepoPilot;
 
     @Test
-    public void test01_createAirline_AirlineDontExist_AirlineLoadedCorrectly() throws ExceptionPilot {
+    public void test01_createPilot_pilotDontExist_pilotLoadedCorrectly() throws ExceptionPilot {
 
         LocalDate dateBorn = LocalDate.parse("1994-01-20");
         Pilot newPilot = Pilot.factoryPilot("30-64140555-4",120,"Cardozo","Franco David",dateBorn);
@@ -32,7 +32,7 @@ public class TestCreateNewPilot {
     }
 
     @Test
-    public void test02_createAirline_AirlineDoesExist_ExceptionAirlineExist() throws ExceptionPilot {
+    public void test02_createPilot_pilotDoesExist_ExceptionPilotExist() throws ExceptionPilot {
 
         LocalDate dateBorn = LocalDate.parse("1994-01-20");
         Pilot theSamePilot = Pilot.factoryPilot("30-64140555-4",120,"Cardozo","Franco David",dateBorn);
