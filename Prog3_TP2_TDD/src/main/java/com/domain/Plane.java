@@ -12,11 +12,11 @@ public class Plane {
     public static Plane factoryPlane(String plicensePlate, String pmodel, Integer pcapacity, Integer pyearConstruction) throws ExceptionPlane{
         if(plicensePlate == null)
             throw new ExceptionPlaneNullLicensePlate("The license plate must not be null");
-        if(plicensePlate == "")
+        if(plicensePlate.equals(""))
             throw new ExceptionPlaneEmptyLicensePlate("The license plate must not be empty");
         if(licensePlateWrong(plicensePlate))
             throw new ExceptionPlaneWrongLicensePlate("The license plate is misspelled");
-        if(pmodel == "")
+        if(pmodel.equals(""))
             throw new ExceptionPlaneEmptyModel("The model must not be empty");
         if(pmodel == null)
             throw new ExceptionPlaneNullModel("The model must not be null");
@@ -37,13 +37,13 @@ public class Plane {
     public static Plane factoryPlane(String plicensePlate, String pmodel, Integer pyearConstruction) throws ExceptionPlane{
         if(plicensePlate == null)
             throw new ExceptionPlaneNullLicensePlate("The license plate must not be null");
-        if(plicensePlate == "")
+        if(plicensePlate.equals(""))
             throw new ExceptionPlaneEmptyLicensePlate("The license plate must not be empty");
         if(licensePlateWrong(plicensePlate))
             throw new ExceptionPlaneWrongLicensePlate("The license plate is misspelled");
         if(pmodel == null)
             throw new ExceptionPlaneNullModel("The model must not be null");
-        if (pmodel == "")
+        if (pmodel.equals(""))
             throw new ExceptionPlaneEmptyModel("The model must not be empty");
         if(pyearConstruction < 0)
             throw new ExceptionPlaneYearNegative("The year must be positive");

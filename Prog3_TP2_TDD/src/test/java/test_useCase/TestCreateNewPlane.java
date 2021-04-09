@@ -1,17 +1,19 @@
 package test_useCase;
 
 import com.domain.Plane;
-import com.exception.exceptionsPlane.ExceptionPlane;
-import com.exception.exceptionsPlane.ExceptionPlaneExist;
+import com.exception.exceptionsPlane.*;
 import com.repository.ICreateRepoPlane;
 import com.useCase.CreatePlaneUseCase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(MockitoExtension.class)
 public class TestCreateNewPlane {
 
     @Mock
@@ -30,7 +32,7 @@ public class TestCreateNewPlane {
     public void test02_CreateNewPlane_planeDoesExist_ExceptionPlaneExist() throws ExceptionPlane{
         Plane theSamePlane = Plane.factoryPlane("LV-FNI","Airbus A330-200",264,2015);
 
-        Mockito.when(iCreateRepoPlane.findPlaneByLicensePlate(theSamePlane.getLicensePlate())).thenReturn(theSamePlane);
+        Mockito.when(iCreateRepoPlane.findPlaneByLicensePlate("LV-FNI")).thenReturn(theSamePlane);
         CreatePlaneUseCase createPlaneUseCase = new CreatePlaneUseCase(iCreateRepoPlane);
         assertThrows(ExceptionPlaneExist.class, () -> {
             createPlaneUseCase.loadPlane(theSamePlane);
