@@ -22,21 +22,23 @@ public class Flight {
             throw new ExceptionFlightDepartureGreaterArrival("The date of departure was less than date of arrival");
         if(codeFly == null)
             throw new ExceptionFlightCodeFlyNullOrEmpty("The code must not be null or empty");
-        if (codeFly == "")
+        if (codeFly.equals(""))
             throw new ExceptionFlightCodeFlyNullOrEmpty("The code must not be null or empty");
-        if(codeFly.substring(0,2) != airline.getCodeIATA())
-            throw new ExceptionFlightCodeFlyDistinctCodeIataAirline("The flight code must be equals that IATA code of airline");
         if(codeFlyWrong(codeFly))
             throw new ExceptionFlightCodeFlyWrong("The flight code is misspelled");
+        if(!airline.getCodeIATA().equals(codeFly.substring(0, 2)))
+            throw new ExceptionFlightCodeFlyDistinctCodeIataAirline("The flight code must be equals that IATA code of airline");
         return new  Flight(codeFly,departure,arrival,departureAirport,arrivalAirport,plane,commandant,copilot,airline);
     }
 
     private static boolean codeFlyWrong(String codeFly){
         String firstValor = codeFly.substring(0,2);
         String comparateFirstValor = firstValor.toUpperCase();
-        String secondValor = codeFly.substring(2,6);
+
         if(codeFly.length() != 7)
             return true;
+
+        String secondValor = codeFly.substring(2,6);
         if(firstValor != comparateFirstValor)
             return true;
         if(firstValor.codePointAt(0) < 65 || firstValor.codePointAt(0) > 90)

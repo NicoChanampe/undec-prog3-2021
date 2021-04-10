@@ -69,8 +69,8 @@ public class TestFlightClass {
         Pilot copilot = Pilot.factoryPilot("19-38654881-3",169,"Luna","Cin Woo",dateCopilot);
         Airline airline = Airline.factoryAirline("30-64140555-4","AR","Aerolineas Argentinas",data);
 
-        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T11:25");
-        LocalDateTime departure = LocalDateTime.parse("2018-10-10T12:30");
+        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T12:25");
+        LocalDateTime departure = LocalDateTime.parse("2018-10-10T11:30");
 
         assertThrows(ExceptionFlightCodeFlyNullOrEmpty.class,() -> {
             Flight myFlight = Flight.factoryFlight("",departure,arrival,depatureAirport,arrivalAirport,plane,commandant,copilot,airline);
@@ -93,8 +93,8 @@ public class TestFlightClass {
         Pilot copilot = Pilot.factoryPilot("19-38654881-3",169,"Luna","Cin Woo",dateCopilot);
         Airline airline = Airline.factoryAirline("30-64140555-4","AR","Aerolineas Argentinas",data);
 
-        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T11:25");
-        LocalDateTime departure = LocalDateTime.parse("2018-10-10T12:30");
+        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T12:25");
+        LocalDateTime departure = LocalDateTime.parse("2018-10-10T11:30");
 
         assertThrows(ExceptionFlightCodeFlyWrong.class,() -> {
             Flight myFlight = Flight.factoryFlight("AR 13f3",departure,arrival,depatureAirport,arrivalAirport,plane,commandant,copilot,airline);
@@ -133,8 +133,8 @@ public class TestFlightClass {
         Pilot copilot = Pilot.factoryPilot("19-38654881-3",169,"Luna","Cin Woo",dateCopilot);
         Airline airline = Airline.factoryAirline("30-64140555-4","AR","Aerolineas Argentinas",data);
 
-        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T11:25");
-        LocalDateTime departure = LocalDateTime.parse("2018-10-10T12:30");
+        LocalDateTime arrival = LocalDateTime.parse("2018-10-10T12:25");
+        LocalDateTime departure = LocalDateTime.parse("2018-10-10T11:30");
 
         assertThrows(ExceptionFlightCodeFlyDistinctCodeIataAirline.class,() -> {
             Flight myFlight = Flight.factoryFlight("AL 1234",departure,arrival,depatureAirport,arrivalAirport,plane,commandant,copilot,airline);
